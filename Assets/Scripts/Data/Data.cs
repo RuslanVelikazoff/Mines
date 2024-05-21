@@ -103,4 +103,9 @@ public class Data : MonoBehaviour
             }
         }
     }
+
+    public bool IsUnlockLevel(int index)
+    {
+        return _levelUnlock[index];
+    }
 }
