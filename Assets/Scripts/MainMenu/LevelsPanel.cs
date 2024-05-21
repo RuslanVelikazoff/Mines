@@ -39,6 +39,7 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[0].onClick.RemoveAllListeners();
             levelButtons[0].onClick.AddListener(() =>
             {
+                Data.Instance.SetCurrentIndexLevel(0);
                 Debug.Log("Load level 1");
             });
         }
@@ -48,6 +49,7 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[1].onClick.RemoveAllListeners();
             levelButtons[1].onClick.AddListener(() =>
             {
+                Data.Instance.SetCurrentIndexLevel(1);
                 Debug.Log("Load level 2");
             });
         }
@@ -57,6 +59,7 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[2].onClick.RemoveAllListeners();
             levelButtons[2].onClick.AddListener(() =>
             {
+                Data.Instance.SetCurrentIndexLevel(2);
                 Debug.Log("Load level 3");
             });
         }
@@ -66,6 +69,7 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[3].onClick.RemoveAllListeners();
             levelButtons[3].onClick.AddListener(() =>
             {
+                Data.Instance.SetCurrentIndexLevel(3);
                 Debug.Log("Load level 4");
             });
         }
@@ -75,6 +79,7 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[4].onClick.RemoveAllListeners();
             levelButtons[4].onClick.AddListener(() =>
             {
+                Data.Instance.SetCurrentIndexLevel(4);
                 Debug.Log("Load level 5");
             });
         }
@@ -84,6 +89,7 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[5].onClick.RemoveAllListeners();
             levelButtons[5].onClick.AddListener(() =>
             {
+                Data.Instance.SetCurrentIndexLevel(5);
                 Debug.Log("Load level 6");
             });
         }
@@ -93,6 +99,7 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[6].onClick.RemoveAllListeners();
             levelButtons[6].onClick.AddListener(() =>
             {
+                Data.Instance.SetCurrentIndexLevel(6);
                 Debug.Log("Load level 7");
             });
         }

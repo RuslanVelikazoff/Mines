@@ -7,6 +7,8 @@ public class Data : MonoBehaviour
     private bool[] _levelUnlock;
     private bool[] _difficulty;
 
+    private int _currentLevelIndex;
+
     private const string saveKey = "MainSave";
 
     private void Awake()
@@ -52,6 +54,7 @@ public class Data : MonoBehaviour
 
         _levelUnlock = data.levelUnlock;
         _difficulty = data.difficulty;
+        _currentLevelIndex = data.currentLevelIndex;
         
         Debug.Log("Data load");
     }
@@ -69,7 +72,8 @@ public class Data : MonoBehaviour
         var data = new GameData()
         {
             levelUnlock = _levelUnlock,
-            difficulty = _difficulty
+            difficulty = _difficulty,
+            currentLevelIndex = _currentLevelIndex
         };
 
         return data;
@@ -107,5 +111,16 @@ public class Data : MonoBehaviour
     public bool IsUnlockLevel(int index)
     {
         return _levelUnlock[index];
+    }
+
+    public void SetCurrentIndexLevel(int index)
+    {
+        _currentLevelIndex = index;
+        Save();
+    }
+
+    public int GetCurrentIndexLevel()
+    {
+        return _currentLevelIndex;
     }
 }
