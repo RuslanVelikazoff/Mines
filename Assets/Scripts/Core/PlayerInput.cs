@@ -34,7 +34,10 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            minefield.OpenCellByCoords(cellCoords);
+            if (minefield != null)
+            {
+                minefield.OpenCellByCoords(cellCoords);
+            }
         }
     }
 }

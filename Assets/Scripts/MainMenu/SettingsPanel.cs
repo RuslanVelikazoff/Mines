@@ -47,6 +47,7 @@ public class SettingsPanel : MonoBehaviour
             backButton.onClick.RemoveAllListeners();
             backButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 this.gameObject.SetActive(false);
                 mainPanel.SetActive(true);
             });
@@ -57,6 +58,7 @@ public class SettingsPanel : MonoBehaviour
             musicButton.onClick.RemoveAllListeners();
             musicButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 if (AudioManager.Instance.MusicPlay())
                 {
                     AudioManager.Instance.OffMusic();
@@ -75,6 +77,7 @@ public class SettingsPanel : MonoBehaviour
             soundButton.onClick.RemoveAllListeners();
             soundButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 if (AudioManager.Instance.SoundsPlay())
                 {
                     AudioManager.Instance.OffSounds();
@@ -93,6 +96,7 @@ public class SettingsPanel : MonoBehaviour
             easyButton.onClick.RemoveAllListeners();
             easyButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Data.Instance.SetDifficulty(easyDifficultyIndex);
                 SetDifficultyButtonSprite();
             });
@@ -103,6 +107,7 @@ public class SettingsPanel : MonoBehaviour
             mediumButton.onClick.RemoveAllListeners();
             mediumButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Data.Instance.SetDifficulty(mediumDifficultyIndex);
                 SetDifficultyButtonSprite();
             });
@@ -113,6 +118,7 @@ public class SettingsPanel : MonoBehaviour
             hardButton.onClick.RemoveAllListeners();
             hardButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Data.Instance.SetDifficulty(hardDifficultyIndex);
                 SetDifficultyButtonSprite();
             });

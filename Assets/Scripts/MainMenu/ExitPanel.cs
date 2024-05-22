@@ -23,6 +23,7 @@ public class ExitPanel : MonoBehaviour
             yesButton.onClick.RemoveAllListeners();
             yesButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Application.Quit();
             });
         }
@@ -32,6 +33,7 @@ public class ExitPanel : MonoBehaviour
             noButton.onClick.RemoveAllListeners();
             noButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 this.gameObject.SetActive(false);
                 mainPanel.SetActive(true);
             });

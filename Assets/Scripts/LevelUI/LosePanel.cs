@@ -22,6 +22,7 @@ public class LosePanel : MonoBehaviour
             restartButton.onClick.RemoveAllListeners();
             restartButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             });
         }
@@ -31,6 +32,7 @@ public class LosePanel : MonoBehaviour
             exitButton.onClick.RemoveAllListeners();
             exitButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Time.timeScale = 1f;
                 SceneManager.LoadScene("MainMenuScene");
             });

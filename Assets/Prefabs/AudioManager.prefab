@@ -46,13 +46,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 0}
-    loop: 0
+    clip: {fileID: 8300000, guid: 902dd42463c45cf469c885e8515f7dd2, type: 3}
+    loop: 1
     volume: 0
     pitch: 0
     source: {fileID: 0}
   - name: Click
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 7221f6323e24c7a4cb5ab1d00d12d60b, type: 3}
+    loop: 0
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Win
+    clip: {fileID: 8300000, guid: 9a0d9667d2b1bdd4987bc14171db46b8, type: 3}
+    loop: 0
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Lose
+    clip: {fileID: 8300000, guid: 3405b2013391eb547a2ee06397f34fb2, type: 3}
     loop: 0
     volume: 0
     pitch: 0

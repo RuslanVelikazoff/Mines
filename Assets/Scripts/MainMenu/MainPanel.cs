@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainPanel : MonoBehaviour
@@ -24,6 +25,9 @@ public class MainPanel : MonoBehaviour
             newGameButton.onClick.RemoveAllListeners();
             newGameButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
+                Data.Instance.SetCurrentIndexLevel(0);
+                SceneManager.LoadScene("Level1");
                 Debug.Log("New Game");
             });
         }
@@ -33,6 +37,7 @@ public class MainPanel : MonoBehaviour
             levelsButton.onClick.RemoveAllListeners();
             levelsButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 this.gameObject.SetActive(false);
                 levelsPanel.SetActive(true);
             });
@@ -43,6 +48,7 @@ public class MainPanel : MonoBehaviour
             settingsButton.onClick.RemoveAllListeners();
             settingsButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 this.gameObject.SetActive(false);
                 settingsPanel.SetActive(true);
             });
@@ -53,6 +59,7 @@ public class MainPanel : MonoBehaviour
             exitButton.onClick.RemoveAllListeners();
             exitButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 this.gameObject.SetActive(false);
                 exitPanel.SetActive(true);
             });

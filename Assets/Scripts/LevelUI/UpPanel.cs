@@ -24,6 +24,7 @@ public class UpPanel : MonoBehaviour
             pauseButton.onClick.RemoveAllListeners();
             pauseButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Time.timeScale = 1f;
                 SceneManager.LoadScene("MainMenuScene");
             });
@@ -34,6 +35,7 @@ public class UpPanel : MonoBehaviour
             helpButton.onClick.RemoveAllListeners();
             helpButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 helpPanel.SetActive(true);
                 Time.timeScale = 0f;
             });

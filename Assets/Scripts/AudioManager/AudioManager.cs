@@ -30,15 +30,20 @@ public class AudioManager : MonoBehaviour
 
             if (s.name == "Theme")
             {
-                s.source.volume = s.volume = PlayerPrefs.GetFloat(PLAYER_PREFS_MUSIC_VOLUME, 1f);
+                s.source.volume = s.volume = PlayerPrefs.GetFloat(PLAYER_PREFS_MUSIC_VOLUME, 0f);
             }
             else
             {
-                s.source.volume = s.volume = PlayerPrefs.GetFloat(PLAYER_PREFS_SOUND_VOLUME, 1f);
+                s.source.volume = s.volume = PlayerPrefs.GetFloat(PLAYER_PREFS_SOUND_VOLUME, 0f);
             }
 
             s.source.loop = s.loop;
         }
+    }
+
+    private void Start()
+    {
+        Play("Theme");
     }
 
     public void Play(string name)

@@ -18,6 +18,7 @@ public class HelpPanel : MonoBehaviour
             backButton.onClick.RemoveAllListeners();
             backButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Time.timeScale = 1f;
                 this.gameObject.SetActive(false);
             });

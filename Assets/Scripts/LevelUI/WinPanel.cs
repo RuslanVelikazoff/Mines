@@ -27,6 +27,7 @@ public class WinPanel : MonoBehaviour
             exitButton.onClick.RemoveAllListeners();
             exitButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 SceneManager.LoadScene("MainMenuScene");
             });
         }
@@ -36,6 +37,7 @@ public class WinPanel : MonoBehaviour
             nextLevelButton.onClick.RemoveAllListeners();
             nextLevelButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 if (currentLevelIndex + 1 < maxLevelIndex)
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

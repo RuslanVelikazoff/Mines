@@ -40,6 +40,8 @@ public class Minefield : MonoBehaviour
         bombsToSetup = totalCells * bombPercentage / 100;
         remainedBombs = bombsToSetup;
         closedCells = totalCells;
+        
+        Debug.Log(bombsToSetup);
     }
 
     private void Start()
@@ -107,12 +109,12 @@ public class Minefield : MonoBehaviour
 
         if (result == OpenCellResult.GameOver)
         {
-            Debug.Log("You lose");
+            GameManager.Instance.LoseGame();
         }
 
         if (closedCells == bombsToSetup)
         {
-            Debug.Log("You win");
+            GameManager.Instance.WinGame();
         }
     }
 

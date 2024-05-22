@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelsPanel : MonoBehaviour
@@ -29,6 +30,7 @@ public class LevelsPanel : MonoBehaviour
             backButton.onClick.RemoveAllListeners();
             backButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 this.gameObject.SetActive(false);
                 mainPanel.SetActive(true);
             });
@@ -39,7 +41,9 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[0].onClick.RemoveAllListeners();
             levelButtons[0].onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Data.Instance.SetCurrentIndexLevel(0);
+                SceneManager.LoadScene("Level1");
                 Debug.Log("Load level 1");
             });
         }
@@ -49,7 +53,9 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[1].onClick.RemoveAllListeners();
             levelButtons[1].onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Data.Instance.SetCurrentIndexLevel(1);
+                SceneManager.LoadScene("Level2");
                 Debug.Log("Load level 2");
             });
         }
@@ -59,7 +65,9 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[2].onClick.RemoveAllListeners();
             levelButtons[2].onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Data.Instance.SetCurrentIndexLevel(2);
+                SceneManager.LoadScene("Level3");
                 Debug.Log("Load level 3");
             });
         }
@@ -69,7 +77,9 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[3].onClick.RemoveAllListeners();
             levelButtons[3].onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Data.Instance.SetCurrentIndexLevel(3);
+                SceneManager.LoadScene("Level4");
                 Debug.Log("Load level 4");
             });
         }
@@ -79,7 +89,9 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[4].onClick.RemoveAllListeners();
             levelButtons[4].onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Data.Instance.SetCurrentIndexLevel(4);
+                SceneManager.LoadScene("Level5");
                 Debug.Log("Load level 5");
             });
         }
@@ -89,18 +101,10 @@ public class LevelsPanel : MonoBehaviour
             levelButtons[5].onClick.RemoveAllListeners();
             levelButtons[5].onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 Data.Instance.SetCurrentIndexLevel(5);
+                SceneManager.LoadScene("Level6");
                 Debug.Log("Load level 6");
-            });
-        }
-        
-        if (levelButtons[6] != null)
-        {
-            levelButtons[6].onClick.RemoveAllListeners();
-            levelButtons[6].onClick.AddListener(() =>
-            {
-                Data.Instance.SetCurrentIndexLevel(6);
-                Debug.Log("Load level 7");
             });
         }
     }

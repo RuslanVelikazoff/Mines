@@ -4,9 +4,11 @@ public class Data : MonoBehaviour
 {
     public static Data Instance;
 
+    [SerializeField]
     private bool[] _levelUnlock;
     private bool[] _difficulty;
 
+    [SerializeField]
     private int _currentLevelIndex;
 
     private const string saveKey = "MainSave";

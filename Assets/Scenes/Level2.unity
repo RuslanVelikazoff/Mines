@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   width: 4
-  height: 4
+  height: 6
   bombPercentage: 25
   visualizer: {fileID: 1382692223}
 --- !u!4 &318786988
@@ -2335,7 +2335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4
+  m_text: 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75dd84f7ba78d8e46805866b9aacf0c3, type: 2}
   m_sharedMaterial: {fileID: -7636132004936525493, guid: 75dd84f7ba78d8e46805866b9aacf0c3, type: 2}
