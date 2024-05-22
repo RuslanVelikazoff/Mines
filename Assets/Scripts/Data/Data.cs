@@ -113,6 +113,11 @@ public class Data : MonoBehaviour
         return _levelUnlock[index];
     }
 
+    public void UnlockLevel(int index)
+    {
+        _levelUnlock[index] = true;
+    }
+
     public void SetCurrentIndexLevel(int index)
     {
         _currentLevelIndex = index;

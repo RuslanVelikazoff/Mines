@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
 
         if (currentLevelIndex + 1 < maxLevelIndex)
         {
+            Data.Instance.UnlockLevel(currentLevelIndex + 1);
             Data.Instance.SetCurrentIndexLevel(currentLevelIndex + 1);
         }
     }
