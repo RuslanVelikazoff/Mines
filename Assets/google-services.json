@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "872048143282",
+    "project_id": "mines-90e92",
+    "storage_bucket": "mines-90e92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872048143282:android:b81ec3c48d0a7324d892ab",
+        "android_client_info": {
+          "package_name": "com.judiker.mines"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIfBjT4I2HdjDMwZqy5CxveQLHNTq9n18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
